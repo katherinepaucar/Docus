@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="codigo.js"></script>
+    <style>
+        body{
+            background-color:papayawhip;
+        }
+        .container{
+            width: 80%;
+            height: 500px;
+            margin: 0 auto;
+           
+         
+        }
+        .flex-container {
+            display: flex;
+            margin:5px;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-containerSol {
+            display: flex;
+            margin:5px;
+            margin-top: 105px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .fila1{
+           
+           border: 1px  blue dotted;
+           margin: 5px;
+        }
+        .fila2{
+           width: 250px;
+           border: 1px solid palevioletred;
+           text-align: center;
+           margin: 5px;
+           color:white;
+            font-weight: bold;
+        }
+      
+        .colorN{
+            background-color: blue;
+        }
+      p{
+          text-align: center;
+          margin-top: 5px;
+          font-size: large;
+          font-family: cursive;
+         font-weight: bold;
+         color:rgb(12, 12, 59);
+          
+      }
+       .contenedor{
+        height: 35px;
+        background-color: white;
+        align-items: center;
+
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p>
+           ¿A qué ciudad pertenece la imagen?
+        </p>
+
+       <div class="flex-container">
+        <div class="fila1" ><img src="images/eiffel-tower.jpg" alt="eiffel-tower" width="300px">
+            <div class="contenedor" ondragover="over()" ondragleave="leave()" ondrop="drop()"  id="eiffel"></div>
+        </div>
+        <div class="fila1"><img src="images/ferris-wheel.jpg" alt="ferris-wheel" width="300px">
+            <div class="contenedor" ondragover="over()" ondragleave="leave()"  ondrop="drop()" id="ferris"></div>
+        </div>
+        <div class="fila1"><img src="images/brooklyn-bridge.jpg" alt="brooklyn-bridge" width="265px">
+            <div class="contenedor" ondragover="over()" ondragleave="leave()" ondrop="drop()"  id="bridge"></div>
+        </div>  
+      </div>
+
+
+      <div class="flex-containerSol">
+        <div class="fila2 colorN" draggable="true" ondragstart="start()" ondragend="end()" id="nuevaYork">Nueva York</div>
+        <div class="fila2 colorN"  draggable="true" ondragstart="start()" ondragend="end()" id="paris">París</div>
+        <div class="fila2 colorN"  draggable="true" ondragstart="start()" ondragend="end()"  id="londres">Londres</div>  
+      </div>
+      </div>
+</body>
+</html>
